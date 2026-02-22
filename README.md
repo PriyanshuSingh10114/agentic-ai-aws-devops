@@ -94,8 +94,8 @@ This project demonstrates a **complete AWS DevOps pipeline** that automatically 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/PriyanshuSingh10114/agentic-ai-aws-devops.git
-cd agentic-ai-aws-devops
+git clone https://github.com/PriyanshuSingh10114/aws-devops-cicd-pipeline.git
+cd aws-devops-cicd-pipeline
 ```
 
 ### 2. Configure AWS Credentials
