@@ -70,7 +70,13 @@ This project demonstrates a **complete AWS DevOps pipeline** that automatically 
 ## Prerequisites
 
 ### Required Tools
-- **AWS CLI** (v2.x) - [Install Guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+- **AWS CLI** (v2.x)
+
+      sudo apt install unzip
+      curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+      unzip awscliv2.zip
+      sudo ./aws/install
+  
 - **Terraform** (v1.0+) - [Install Guide](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 - **Git**
 - **Node.js** (v18+) - For local development (optional)
@@ -88,7 +94,8 @@ This project demonstrates a **complete AWS DevOps pipeline** that automatically 
 ### 1. Clone the Repository
 
 ```bash
-cd aws-devops
+git clone https://github.com/PriyanshuSingh10114/agentic-ai-aws-devops.git
+cd agentic-ai-aws-devops
 ```
 
 ### 2. Configure AWS Credentials
@@ -104,14 +111,13 @@ aws configure
 ### 3. Create GitHub Personal Access Token
 
 1. Go to GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)
-2. Generate new token with scopes: `repo` and `admin:repo_hook`
+2. Generate new token with scopes: `repo` and `work`
 3. Copy the token (you'll need it in the next step)
 
 ### 4. Configure Terraform Variables
 
 ```bash
 cd terraform
-cp terraform.tfvars.example terraform.tfvars
 ```
 
 Edit `terraform.tfvars`:
@@ -141,17 +147,6 @@ terraform apply --auto-approve
 ```
 
 **Deployment takes ~5-10 minutes**
-
-- ECR Repository
-
-- ECS Cluster
-
-
-
-- ALB
-
-
-- S3 Bucket
 
 
 ### 6. Access Your Application
@@ -273,18 +268,6 @@ git push origin main
 - Go to CloudWatch Console:
    - `/ecs/aws-devops` - Application logs
    - `/aws/codebuild/aws-devops` - Build logs
-
----
-
-## Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ---
 
