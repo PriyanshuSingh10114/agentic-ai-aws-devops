@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Node modules
 node_modules/
 npm-debug.log*
@@ -10,12 +11,19 @@ yarn-error.log*
 .env.*.local
 
 # IDE
+=======
+# Root level .gitignore for AWS DevOps project
+# Subdirectories (app/, terraform/) have their own .gitignore files
+
+# IDE files (applies to entire project)
+>>>>>>> 1a5598fd21e4483a6c0bb28bc0c5eeabb0237106
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
+<<<<<<< HEAD
 # OS
 .DS_Store
 Thumbs.db
@@ -35,3 +43,22 @@ build/
 # Temporary files
 tmp/
 temp/
+=======
+# OS files (applies to entire project)
+.DS_Store
+Thumbs.db
+
+# Environment variables (root level only)
+.env
+.env.local
+.env.*.local
+
+# Logs (root level)
+*.log
+
+# Temporary files (root level)
+tmp/
+temp/
+deployment-outputs.txt
+outputs.txt
+>>>>>>> 1a5598fd21e4483a6c0bb28bc0c5eeabb0237106
